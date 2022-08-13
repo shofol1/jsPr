@@ -112,6 +112,14 @@ const restaurent = {
 // restaurentCopy.name = "shanto";
 // console.log(restaurentCopy);
 
-const arr = [1, 2, 3, 4, 5];
-const [a, b, ...others] = arr;
-console.log(a, b, others);
+// const arr = [1, 2, 3, 4, 5];
+// const [a, b, ...others] = arr;
+// console.log(a, b, others);
+const [pizza, , risotto, ...others] = [
+  ...restaurent.mainMenu,
+  ...restaurent.starterMenu,
+];
+console.log(pizza, risotto, others);
+
+const { fri, ...weekday } = restaurent.openingHour;
+console.log(fri, weekday);
