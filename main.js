@@ -1,3 +1,4 @@
+"use strict";
 //primitive type vs refference type
 // string.       || objects
 // number.       || functions
@@ -59,7 +60,12 @@ const restaurent = {
       close: 24,
     },
   },
-  orderPasta: function (ing1, ing2, ing3) {
+  // orderPasta: function (ing1, ing2, ing3) {
+  //   return `here is your pasta with ${ing1},${ing2} and ${ing3}`;
+  // },
+
+  // es5 enhanced object literal
+  orderPasta(ing1, ing2, ing3) {
     return `here is your pasta with ${ing1},${ing2} and ${ing3}`;
   },
   orderPizza: function (mainIngredient, ...otherIngredients) {
@@ -141,16 +147,49 @@ const restaurent = {
 
 // restaurent.orderPizza("mashroom", "onion", "potato", "chicken");
 
-const person1 = {
-  name: "shofol",
-  guestNum: 0,
-};
+// const person1 = {
+//   name: "shofol",
+//   guestNum: 0,
+// };
 
-const person2 = {
-  name: "shanto",
-  owner: "Koli",
-};
+// const person2 = {
+//   name: "shanto",
+//   owner: "Koli",
+// };
 
-person1.guestNum = person1.guestNum ?? 10;
-person2.guestNum && "<Anonymouse>";
-console.log(person2);
+// person1.guestNum = person1.guestNum ?? 10;
+// person2.guestNum && "<Anonymouse>";
+// console.log(person2);
+
+// for ([i, el] of restaurent.starterMenu.entries()) {
+//   console.log(`${i + 1}:${el}`);
+// }
+
+//object length
+
+const openingHour = {
+  fri: {
+    open: 11,
+    close: 24,
+  },
+  sat: {
+    open: 12,
+    close: 24,
+  },
+  sun: {
+    open: 11,
+    close: 24,
+  },
+};
+// for (const days of Object.keys(openingHour)) {
+//   console.log(days.length);
+// }
+// const values = Object.values(openingHour);
+// console.log(values);
+
+//convert object into array
+const entries = Object.entries(openingHour);
+console.log(entries);
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open ${open} and close ${close}`);
+}
