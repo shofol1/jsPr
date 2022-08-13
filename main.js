@@ -167,20 +167,20 @@ const restaurent = {
 
 //object length
 
-const openingHour = {
-  fri: {
-    open: 11,
-    close: 24,
-  },
-  sat: {
-    open: 12,
-    close: 24,
-  },
-  sun: {
-    open: 11,
-    close: 24,
-  },
-};
+// const openingHour = {
+//   fri: {
+//     open: 11,
+//     close: 24,
+//   },
+//   sat: {
+//     open: 12,
+//     close: 24,
+//   },
+//   sun: {
+//     open: 11,
+//     close: 24,
+//   },
+// };
 // for (const days of Object.keys(openingHour)) {
 //   console.log(days.length);
 // }
@@ -188,8 +188,17 @@ const openingHour = {
 // console.log(values);
 
 //convert object into array
-const entries = Object.entries(openingHour);
-console.log(entries);
-for (const [key, { open, close }] of entries) {
-  console.log(`On ${key} we open ${open} and close ${close}`);
-}
+// const entries = Object.entries(openingHour);
+// console.log(entries);
+// for (const [key, { open, close }] of entries) {
+//   console.log(`On ${key} we open ${open} and close ${close}`);
+// }
+
+const menu = ["pizza", "pizza", "chicken", "wings", "wings"];
+
+const menuSet = new Set(menu);
+console.log(menuSet);
+menuSet.add("dim");
+console.log(menuSet);
+menuSet.delete("dim");
+console.log(menuSet);
