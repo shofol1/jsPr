@@ -62,6 +62,9 @@ const restaurent = {
   orderPasta: function (ing1, ing2, ing3) {
     return `here is your pasta with ${ing1},${ing2} and ${ing3}`;
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
 };
 // let [first, , second] = restaurent.categories;
 // console.log(first, second);
@@ -115,11 +118,25 @@ const restaurent = {
 // const arr = [1, 2, 3, 4, 5];
 // const [a, b, ...others] = arr;
 // console.log(a, b, others);
-const [pizza, , risotto, ...others] = [
-  ...restaurent.mainMenu,
-  ...restaurent.starterMenu,
-];
-console.log(pizza, risotto, others);
+// const [pizza, , risotto, ...others] = [
+//   ...restaurent.mainMenu,
+//   ...restaurent.starterMenu,
+// ];
+// console.log(pizza, risotto, others);
 
-const { fri, ...weekday } = restaurent.openingHour;
-console.log(fri, weekday);
+// const { fri, ...weekday } = restaurent.openingHour;
+// console.log(fri, weekday);
+
+//spreed arguments oppsite of spreed operators
+
+// const add = (...numbers) => {
+//   let sum = 0;
+//   for (i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
+
+// add(2, 3);
+// add(2, 3, 5);
+// add(2, 3, 5, 6);
+
+restaurent.orderPizza("mashroom", "onion", "potato", "chicken");
