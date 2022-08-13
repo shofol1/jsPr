@@ -139,4 +139,18 @@ const restaurent = {
 // add(2, 3, 5);
 // add(2, 3, 5, 6);
 
-restaurent.orderPizza("mashroom", "onion", "potato", "chicken");
+// restaurent.orderPizza("mashroom", "onion", "potato", "chicken");
+
+const person1 = {
+  name: "shofol",
+  guestNum: 0,
+};
+
+const person2 = {
+  name: "shanto",
+  owner: "Koli",
+};
+
+person1.guestNum = person1.guestNum ?? 10;
+person2.guestNum && "<Anonymouse>";
+console.log(person2);
