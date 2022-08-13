@@ -206,26 +206,26 @@ const restaurent = {
 
 //map
 
-const rest = new Map();
-rest.set("name", "shofol");
-rest.set(1, "age");
-console.log(rest.get("name"));
+// const rest = new Map();
+// rest.set("name", "shofol");
+// rest.set(1, "age");
+// console.log(rest.get("name"));
 
-const question = new Map([
-  ["question", "which laguage is more powerfull?"],
-  [1, "HTML"],
-  [2, "CSS"],
-  [3, "JS"],
-  ["correct", 3],
-  [true, "correct"],
-  [false, "try again"],
-]);
+// const question = new Map([
+//   ["question", "which laguage is more powerfull?"],
+//   [1, "HTML"],
+//   [2, "CSS"],
+//   [3, "JS"],
+//   ["correct", 3],
+//   [true, "correct"],
+//   [false, "try again"],
+// ]);
 
-console.log(question.get("question"));
-for (const [key, value] of question) {
-  if (typeof key === "number") console.log(`Answer ${key} : ${value}`);
-}
+// console.log(question.get("question"));
+// for (const [key, value] of question) {
+//   if (typeof key === "number") console.log(`Answer ${key} : ${value}`);
+// }
 
-const answer = Number(prompt("your answer"));
+// const answer = Number(prompt("your answer"));
 
-console.log(question.get(question.get("correct") === answer));
+// console.log(question.get(question.get("correct") === answer));
