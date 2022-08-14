@@ -326,3 +326,21 @@ console.log(annoucement.replaceAll("IUBT", "IUBAT"));
 // planeInLine(5);
 // planeInLine(10);
 // planeInLine(3);
+
+const flights =
+  "_Delayed_Departure;fao92344293;txl21335345334;11:25+_Arrival;bru0454405433;fao93766456;11:45+_Delayed_Arrival;jel7543433345;fao934499399;12:05+_Departure;fao94559390;lis23234556445;12:40";
+
+// 🎈 Delayed Departure FAO TXL (11h25)
+const rows = flights.split("+");
+console.log(rows);
+for (let row of rows) {
+  const [type, from, to, time] = row.split(";");
+  console.log(
+    `${type.startsWith("_Delayed") ? "🎈" : " "}${type.replaceAll(
+      "_",
+      " "
+    )} ${from.slice(0, 3).toUpperCase()} ${to
+      .slice(0, 3)
+      .toUpperCase()} (${time.replace(":", "h")})`.padStart(36)
+  );
+}
