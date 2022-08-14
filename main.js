@@ -229,3 +229,100 @@ const restaurent = {
 // const answer = Number(prompt("your answer"));
 
 // console.log(question.get(question.get("correct") === answer));
+
+const airline = "novo airline BD";
+const country = " Bangladesh is a.  \n";
+// console.log(airline.indexOf("air"));
+// console.log(airline.indexOf(" "));
+// console.log(airline.slice(0, airline.indexOf("airline")));
+// console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+// console.log(airline.slice(1, -1));
+// console.log(airline.slice(0, airline.indexOf(" ")));
+
+// console.log(new String("shofol"));
+// console.log(country.length);
+// const trim = country.trim();
+// console.log(trim.length);
+
+//replace
+// const priceBD = "2,300tk";
+// const priceUS = priceBD.replace("tk", "$");
+// console.log(priceUS);
+
+//replace any word
+const annoucement =
+  "All the students of IUBT please come in front of IUBT gate";
+console.log(annoucement.replace(/IUBT/g, "IUBAT")); //regular expression
+console.log(annoucement.replaceAll("IUBT", "IUBAT"));
+
+//boolean string methods
+
+// console.log(airline.includes("BD"));
+// console.log(airline.startsWith("no"));
+// console.log(airline.startsWith("noc"));
+// console.log(airline.endsWith("BD"));
+
+// function checkBeggage(items) {
+//   const baggage = items.toLowerCase();
+
+//   if (baggage.includes("knife") || baggage.includes("gun")) {
+//     console.log("you are not allowed to abroad");
+//   } else {
+//     console.log("welcome to abroad");
+//   }
+// }
+
+// checkBeggage("I have clothes,medicine,knife");
+// checkBeggage("I have clothes,medicine");
+// checkBeggage("I have laptop,mobile,gun");
+
+// const myName = "i am shofol";
+// console.log(myName.split(" "));
+// const [firstName, lastName] = "Ashikul Shofol".split(" ");
+// console.log(firstName);
+// console.log(lastName);
+// const fullName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+// console.log(fullName);
+
+//capitalize name
+
+// function capitalize(name) {
+//   const names = name.split(" ");
+//   const nameCapitalized = [];
+//   for (let n of names) {
+//     // nameCapitalized.push(n[0].toUpperCase() + n.slice(1));
+
+//     nameCapitalized.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(nameCapitalized.join(" "));
+// }
+
+// capitalize("md ashikul hossain");
+// capitalize("amir Sohel");
+
+//padStart()
+// console.log("shofol".padStart(24, "."));
+// console.log("shofol".padEnd(24, "."));
+
+//credit card
+
+// function makeCreditCard(number) {
+//   const str = number + " ";
+//   const last = str.slice(-5);
+//   console.log(last.padStart(str.length, "*"));
+// }
+
+// makeCreditCard(46448488484484423);
+// makeCreditCard(46448488484484865);
+
+//repeat
+
+// const message = "Bad weather .... all Departures Delayed..";
+// console.log(message.repeat(5));
+
+// const planeInLine = (n) => {
+//   console.log(`There are ${n} planes in line ${"🛩".repeat(n)}`);
+// };
+// planeInLine(5);
+// planeInLine(10);
+// planeInLine(3);
