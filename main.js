@@ -349,3 +349,30 @@ const flights =
 //       .toUpperCase()} (${time.replace(":", "h")})`.padStart(36)
 //   );
 // }
+
+//passing by value and ref
+
+// const flight = "NOBO AIR 102";
+// const person = {
+//   name: "Ashikul Hossain",
+//   passport: 232356577867,
+// };
+
+// function checkin(flightNum, passenger) {
+//   flightNum = "US Bangla 111";
+//   passenger.name = "MR." + passenger.name;
+//   if (passenger.passport === 232356577867) {
+//     alert("check in");
+//   } else {
+//     alert("wrong passport");
+//   }
+// }
+// checkin(flight, person);
+// console.log(flight);
+// console.log(person);
+
+// function newPassport(passenger) {
+//   passenger.passport = Math.trunc(Math.random() * 10000000);
+// }
+// newPassport(person);
+// checkin(flight, person);
