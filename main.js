@@ -376,3 +376,79 @@ const flights =
 // }
 // newPassport(person);
 // checkin(flight, person);
+
+// function firstLetterCapital(str) {
+//   const wordArray = str.split(" ");
+//   const fullName = [];
+//   for (const word of wordArray) {
+//     const [first, ...others] = word;
+
+//     fullName.push(
+//       [first.replace(first[0], first[0].toUpperCase()), ...others].join("")
+//     );
+//   }
+//   console.log(fullName.join(" "));
+// }
+
+// const capitalized = firstLetterCapital("md ashikul hossain Shafol");
+// console.log(capitalized);
+
+//higher order function example
+
+//---this are call back function ----
+
+// function makeFirstUpper(str) {
+//   const [first, ...others] = str.split(" ");
+//   return [first.toUpperCase(), ...others].join(" ");
+// }
+// function makeFirstLower(str) {
+//   const [first, ...others] = str.split(" ");
+//   return [first.toLowerCase(), ...others].join(" ");
+// }
+
+//----this is H.O.F----
+// function transformer(str, fn) {
+//   console.log(`original string: ${str} `);
+//   console.log(`converted to string: ${fn(str)}`);
+//   console.log(`converted by : ${fn.name}`);
+// }
+// console.log("-------------");
+
+// transformer("Javascript is a powerfull language", makeFirstLower);
+// console.log("-------------");
+// transformer("Javascript is a powerfull language", makeFirstUpper);
+
+//function returning funtion
+
+// const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
+// const greeterHey = greet("hey");
+// greeterHey("shofol");
+
+//call and apply
+const novoAir = {
+  name: "Novo airbd",
+  code: "NA12",
+  bookings: [],
+  book(passenger, seat) {
+    this.bookings.push({ flights: [passenger, seat, this.name, this.code] });
+    return `${passenger} book ${seat} on ${this.name} and code is ${this.code}`;
+  },
+};
+
+console.log(novoAir.book("shofol", "1A"));
+console.log(novoAir.bookings);
+
+const UsBangla = {
+  name: "US bangla bd",
+  code: "US12",
+  bookings: [],
+};
+const bookNew = novoAir.book;
+bookNew.call(UsBangla, "shanto", "B1");
+console.log(UsBangla.bookings);
+
+const flightData = ["sohan", "3C"];
+
+bookNew.call(novoAir, ...flightData);
+
+console.log(novoAir);
