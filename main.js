@@ -452,3 +452,8 @@ const flightData = ["sohan", "3C"];
 bookNew.call(novoAir, ...flightData);
 
 console.log(novoAir);
+///bind method
+
+const anotherBook = bookNew.bind(novoAir, "akash", "D3");
+anotherBook();
+console.log(novoAir);
